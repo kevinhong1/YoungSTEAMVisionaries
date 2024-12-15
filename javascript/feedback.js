@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
       button.type = "button";
       button.className = "rating-btn";
       button.textContent = i;
-      button.setAttribute("data-value", i); 
+      button.setAttribute("data-value", i);
       button.addEventListener("click", () => handleRating(group, i));
       group.appendChild(button);
     }
@@ -30,34 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const groupName = group.dataset.ratingGroup;
     document.getElementById(`${groupName}Rating`).value = value;
   }
-
-  const form = document.getElementById("feedbackForm");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const ratingInputs = form.querySelectorAll('input[type="hidden"]');
-    let isValid = true;
-
-    ratingInputs.forEach((input) => {
-      if (!input.value) {
-        isValid = false;
-        const section = input.closest(".rating-section");
-        section.classList.add("error");
-      }
-    });
-
-    if (!isValid) {
-      alert("Please provide all ratings before submitting.");
-      return;
-    }
-
-    const submitButton = form.querySelector('button[type="submit"]');
-    submitButton.disabled = true;
-    submitButton.innerHTML =
-      '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Submitting...';
-
-    form.submit();
-  });
 
   document.querySelectorAll(".rating-buttons").forEach((group) => {
     group.addEventListener("click", () => {
