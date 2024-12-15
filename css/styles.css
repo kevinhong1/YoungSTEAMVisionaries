@@ -72,15 +72,18 @@ body {
   transition: all 0.3s ease;
 }
 .hero {
-  position: relative;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 76px;
-  background: linear-gradient(to bottom, #ffffff, #ffffff, #f9f7f7);
-  overflow: hidden;
+    position: relative;
+    height: 500px; 
+    min-height: 500px; 
+    max-height: 500px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 76px;
+    background: linear-gradient(to bottom, #ffffff, #ffffff, #f9f7f7);
+    overflow: hidden;
+    width: 100%;
 }
 
 #particles-js {
@@ -93,10 +96,11 @@ body {
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  color: rgb(28, 27, 29);
-  padding: 2rem;
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero h1 {
