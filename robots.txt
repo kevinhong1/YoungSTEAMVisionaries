@@ -1,7 +1,4 @@
 User-agent: *
-Allow: /
-Disallow: /thank-you.html
-Disallow: /admin/
-Disallow: /private/
+Disallow:
 
-Sitemap: https://youngsteamvisionaries.org/sitemap.xml
+Sitemap: https://youngsteamvisionaries.academy/sitemap.xml
