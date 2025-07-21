@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="View details and download free printable worksheets from Young STEAM Visionaries. Find answer keys and similar resources for K-8 students." />
+    <meta property="og:title" content="Worksheet Detail | Young STEAM Visionaries" />
+    <meta property="og:description" content="Download free printable worksheets and answer keys for K-8 students. Explore similar resources and activities." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://youngsteamvisionaries.academy/worksheet-detail.html" />
+    <meta property="og:image" content="https://youngsteamvisionaries.academy/images/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Worksheet Detail | Young STEAM Visionaries" />
+    <meta name="twitter:description" content="Download free printable worksheets and answer keys for K-8 students. Explore similar resources and activities." />
+    <meta name="twitter:image" content="https://youngsteamvisionaries.academy/images/logo.png" />
+    <link rel="canonical" href="https://youngsteamvisionaries.academy/worksheet-detail.html" />
+    <meta name="keywords" content="worksheet detail, free worksheets, printable worksheets, answer keys, K-8 worksheets, STEAM worksheets, math worksheets, science worksheets, reading worksheets, arts worksheets, educational resources, student support, learning activities, educational engagement, educational excellence, educational innovation, educational inspiration, educational creativity, educational curiosity, educational motivation, educational achievement, educational success, educational growth, educational journey, educational potential, educational fun, educational made easy, accessible education, inclusive education" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Worksheet Detail | Young STEAM Visionaries</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/vue@3"></script>
+        <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <!-- Reuse navbar (simplified link back) -->
+    <nav class="navbar navbar-light bg-white shadow-sm py-3">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html"
+          >Young STEAM Visionaries</a
+        >
+        <a class="btn btn-outline-primary" href="worksheet.html"
+          >Back to Worksheets</a
+        >
+      </div>
+    </nav>
+
+    <div id="detailApp" class="container py-5" v-cloak>
+      <div v-if="!worksheet">
+        <p class="text-center text-muted">Worksheet not found.</p>
+      </div>
+      <div v-else class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="row gy-4 align-items-start">
+            <div class="col-md-5">
+              <img
+                :src="worksheet.img"
+                :alt="worksheet.title"
+                class="img-fluid rounded"
+                loading="lazy"
+              />
+            </div>
+            <div class="col-md-7">
+              <h2 class="fw-semibold mb-3">{{ worksheet.title }}</h2>
+              <p class="mb-2">
+                <strong>Grades:</strong> {{ worksheet.grades.join(', ') }}
+              </p>
+              <p class="mb-2" v-if="worksheet.subjects.length">
+                <strong>Subjects:</strong> {{ worksheet.subjects.join(', ') }}
+              </p>
+              <p class="mb-2" v-if="worksheet.games.length">
+                <strong>Mind Games:</strong> {{ worksheet.games.join(', ') }}
+              </p>
+              <p class="my-4">{{ worksheet.description }}</p>
+              <a
+                :href="worksheet.img"
+                class="btn btn-primary me-2"
+                :download="worksheet.img.split('/').pop()"
+                >Download Worksheet</a>
+              <a
+                v-if="worksheet.id"
+                :href="'images/' + worksheet.id + 'a.png'"
+                class="btn btn-outline-primary"
+                :download="worksheet.id + 'a.png'"
+                >Download Answer Key</a>
+            </div>
+          </div>
+
+          <!-- Similar worksheets -->
+          <div v-if="similarWorks.length" class="mt-5">
+            <h4 class="mb-3">You may also like</h4>
+            <div class="row g-4">
+              <div class="col-sm-4" v-for="s in similarWorks" :key="s.id">
+                <a
+                  :href="'worksheet-detail.html?id=' + s.id"
+                  class="text-decoration-none"
+                >
+                  <div class="card h-100">
+                    <img :src="s.img" class="card-img-top" loading="lazy" />
+                    <div class="card-body">
+                      <h6 class="fw-semibold mb-0">{{ s.title }}</h6>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const { createApp, ref, onMounted } = Vue;
+
+      // Same baseline worksheets as main page
+      const baseWorksheets = [
+        {
+              id: 1,
+              title: "Visual Subtraction Practice",
+              img: "images/1.png",
+              grades: ["K", "1st"],
+              subjects: ["Math"],
+              games: [],
+              summary: "Practice subtracting numbers with visual clues.",
+              description:
+                "This worksheet helps students practice basic subtraction skills with fun visuals to better understand the fundamentals.",
+              download: "#",
+        },
+        
+      ];
+
+      createApp({
+        setup() {
+          const worksheet = ref(null);
+          const allWsRef = ref([...baseWorksheets]); // will be replaced by API data
+          const similarWorks = ref([]);
+
+          const computeSimilar = () => {
+            if (!worksheet.value) return;
+            const keywords = [
+              ...worksheet.value.title.toLowerCase().split(/\s+/),
+              ...(worksheet.value.subjects || []).map((s) => s.toLowerCase()),
+              ...(worksheet.value.games || []).map((g) => g.toLowerCase()),
+            ];
+            const scored = allWsRef.value
+              .filter((w) => w.id !== worksheet.value.id)
+              .map((w) => {
+                const words = [
+                  ...w.title.toLowerCase().split(/\s+/),
+                  ...(w.subjects || []).map((s) => s.toLowerCase()),
+                  ...(w.games || []).map((g) => g.toLowerCase()),
+                ];
+                const matchCount = words.filter((word) =>
+                  keywords.includes(word)
+                ).length;
+                return { w, score: matchCount };
+              })
+              .filter((o) => o.score > 0)
+              .sort((a, b) => b.score - a.score)
+              .slice(0, 3)
+              .map((o) => o.w);
+            similarWorks.value = scored;
+          };
+
+          const params = new URLSearchParams(window.location.search);
+          const idParam = params.get("id");
+
+          const setFromList = (list) => {
+            const match = list.find((w) => String(w.id) === idParam);
+            if (match) worksheet.value = match;
+          };
+
+          if (idParam) {
+            // try API first
+            onMounted(async () => {
+              try {
+                const apiRes = await fetch(`/api/worksheets/${idParam}`);
+                if (apiRes.ok) {
+                  worksheet.value = await apiRes.json();
+                  const listRes = await fetch("/api/worksheets");
+                  if (listRes.ok) {
+                    allWsRef.value = await listRes.json();
+                  }
+                }
+              } catch {}
+              if (!worksheet.value) {
+                setFromList(allWsRef.value);
+              }
+              computeSimilar();
+            });
+          }
+
+          // fallback when no API (e.g., local dev)
+          if (!idParam) {
+            worksheet.value = null;
+          }
+
+          return { worksheet, similarWorks };
+        },
+      }).mount("#detailApp");
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
