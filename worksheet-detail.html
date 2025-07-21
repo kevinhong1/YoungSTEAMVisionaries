@@ -2,18 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="View details and download free printable worksheets from Young STEAM Visionaries. Find answer keys and similar resources for K-8 students." />
-    <meta property="og:title" content="Worksheet Detail | Young STEAM Visionaries" />
-    <meta property="og:description" content="Download free printable worksheets and answer keys for K-8 students. Explore similar resources and activities." />
+    <meta
+      name="description"
+      content="View details and download free printable worksheets from Young STEAM Visionaries. Find answer keys and similar resources for K-8 students."
+    />
+    <meta
+      property="og:title"
+      content="Worksheet Detail | Young STEAM Visionaries"
+    />
+    <meta
+      property="og:description"
+      content="Download free printable worksheets and answer keys for K-8 students. Explore similar resources and activities."
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://youngsteamvisionaries.academy/worksheet-detail.html" />
-    <meta property="og:image" content="https://youngsteamvisionaries.academy/images/logo.png" />
+    <meta
+      property="og:url"
+      content="https://youngsteamvisionaries.academy/worksheet-detail.html"
+    />
+    <meta
+      property="og:image"
+      content="https://youngsteamvisionaries.academy/images/logo.png"
+    />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Worksheet Detail | Young STEAM Visionaries" />
-    <meta name="twitter:description" content="Download free printable worksheets and answer keys for K-8 students. Explore similar resources and activities." />
-    <meta name="twitter:image" content="https://youngsteamvisionaries.academy/images/logo.png" />
-    <link rel="canonical" href="https://youngsteamvisionaries.academy/worksheet-detail.html" />
-    <meta name="keywords" content="worksheet detail, free worksheets, printable worksheets, answer keys, K-8 worksheets, STEAM worksheets, math worksheets, science worksheets, reading worksheets, arts worksheets, educational resources, student support, learning activities, educational engagement, educational excellence, educational innovation, educational inspiration, educational creativity, educational curiosity, educational motivation, educational achievement, educational success, educational growth, educational journey, educational potential, educational fun, educational made easy, accessible education, inclusive education" />
+    <meta
+      name="twitter:title"
+      content="Worksheet Detail | Young STEAM Visionaries"
+    />
+    <meta
+      name="twitter:description"
+      content="Download free printable worksheets and answer keys for K-8 students. Explore similar resources and activities."
+    />
+    <meta
+      name="twitter:image"
+      content="https://youngsteamvisionaries.academy/images/logo.png"
+    />
+    <link
+      rel="canonical"
+      href="https://youngsteamvisionaries.academy/worksheet-detail.html"
+    />
+    <meta
+      name="keywords"
+      content="worksheet detail, free worksheets, printable worksheets, answer keys, K-8 worksheets, STEAM worksheets, math worksheets, science worksheets, reading worksheets, arts worksheets, educational resources, student support, learning activities, educational engagement, educational excellence, educational innovation, educational inspiration, educational creativity, educational curiosity, educational motivation, educational achievement, educational success, educational growth, educational journey, educational potential, educational fun, educational made easy, accessible education, inclusive education"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Worksheet Detail | Young STEAM Visionaries</title>
     <link
@@ -22,12 +52,15 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://unpkg.com/vue@3"></script>
-        <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <!-- Reuse navbar (simplified link back) -->
     <nav class="navbar navbar-light bg-white shadow-sm py-3">
       <div class="container">
         <a class="navbar-brand fw-bold" href="index.html"
@@ -70,17 +103,18 @@
                 :href="worksheet.img"
                 class="btn btn-primary me-2"
                 :download="worksheet.img.split('/').pop()"
-                >Download Worksheet</a>
+                >Download Worksheet</a
+              >
               <a
                 v-if="worksheet.id"
                 :href="'images/' + worksheet.id + 'a.png'"
                 class="btn btn-outline-primary"
                 :download="worksheet.id + 'a.png'"
-                >Download Answer Key</a>
+                >Download Answer Key</a
+              >
             </div>
           </div>
 
-          <!-- Similar worksheets -->
           <div v-if="similarWorks.length" class="mt-5">
             <h4 class="mb-3">You may also like</h4>
             <div class="row g-4">
@@ -106,27 +140,49 @@
     <script>
       const { createApp, ref, onMounted } = Vue;
 
-      // Same baseline worksheets as main page
       const baseWorksheets = [
         {
-              id: 1,
-              title: "Visual Subtraction Practice",
-              img: "images/1.png",
-              grades: ["K", "1st"],
-              subjects: ["Math"],
-              games: [],
-              summary: "Practice subtracting numbers with visual clues.",
-              description:
-                "This worksheet helps students practice basic subtraction skills with fun visuals to better understand the fundamentals.",
-              download: "#",
+          id: 1,
+          title: "Visual Subtraction Practice",
+          img: "images/1.png",
+          grades: ["K", "1st"],
+          subjects: ["Math"],
+          games: [],
+          summary: "Practice subtracting numbers with visual clues.",
+          description:
+            "This worksheet helps students practice basic subtraction skills with fun visuals to better understand the fundamentals.",
+          download: "#",
         },
-        
+        {
+          id: 2,
+          title: "Visual Subtraction Practice 2",
+          img: "images/2.png",
+          grades: ["K", "1st"],
+          subjects: ["Math"],
+          games: [],
+          summary: "Practice subtracting numbers with visual clues.",
+          description:
+            "This worksheet helps students practice basic subtraction skills with fun visuals to better understand the fundamentals.",
+          download: "#",
+        },
+        {
+          id: 3,
+          title: "Visual Subtraction Practice 3",
+          img: "images/3.png",
+          grades: ["K", "1st"],
+          subjects: ["Math"],
+          games: [],
+          summary: "Practice subtracting numbers with visual clues.",
+          description:
+            "This worksheet helps students practice basic subtraction skills with fun visuals to better understand the fundamentals.",
+          download: "#",
+        },
       ];
 
       createApp({
         setup() {
           const worksheet = ref(null);
-          const allWsRef = ref([...baseWorksheets]); // will be replaced by API data
+          const allWsRef = ref([...baseWorksheets]); 
           const similarWorks = ref([]);
 
           const computeSimilar = () => {
@@ -165,7 +221,6 @@
           };
 
           if (idParam) {
-            // try API first
             onMounted(async () => {
               try {
                 const apiRes = await fetch(`/api/worksheets/${idParam}`);
@@ -184,7 +239,6 @@
             });
           }
 
-          // fallback when no API (e.g., local dev)
           if (!idParam) {
             worksheet.value = null;
           }

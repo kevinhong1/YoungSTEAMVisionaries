@@ -3,7 +3,6 @@
     height: 20px !important;
   }
 }
-/* Hide Free Worksheets button in navbar for screens < 440px */
 @media (max-width: 439.98px) {
   .navbar .btn[href="worksheet.html"] {
     display: none !important;
@@ -29,7 +28,7 @@ html {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -5px; /* adjusted value to move the underline further down */
+  bottom: -5px; 
   width: 100%;
   height: 3px;
   background-color: var(--sky-blue);
@@ -50,11 +49,11 @@ html {
 
 .nav-link .arrow-down {
   display: inline-block;
-  background: #fff; /* match your navbar background */
+  background: #fff; 
   position: relative;
-  z-index: 10; /* ensure it's above the underline */
+  z-index: 10; 
   padding-left: 2px;
-  margin-bottom: -3px; /* pull it up over the underline */
+  margin-bottom: -3px; 
 }
 
 .card img {
@@ -67,15 +66,14 @@ footer {
 }
 
 :root {
-  --bs-primary: #5471d1; /* Slate blue */
-  --sky-blue: #36bade; /* Bright sky blue */
+  --bs-primary: #5471d1; 
+  --sky-blue: #36bade; 
 }
 
-/* ---------------- Navbar Sky-blue Theme ---------------- */
 .navbar-brand {
   color: var(--sky-blue) !important;
   font-weight: 600;
-  margin-right: 0.25rem !important; /* tighter gap */
+  margin-right: 0.25rem !important; 
 }
 
 .navbar-brand:hover,
@@ -83,7 +81,6 @@ footer {
   color: var(--sky-blue) !important;
 }
 
-/* Gray nav links by default; text stays gray on hover */
 .navbar .nav-link {
   color: #555 !important;
   font-weight: 600;
@@ -91,10 +88,9 @@ footer {
 
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
-  color: #555 !important; /* maintain gray, underline provides aqua effect */
+  color: #555 !important;
 }
 
-/* Sky-blue primary button inside navbar */
 .navbar .btn-primary {
   background-color: var(--sky-blue);
   border-color: var(--sky-blue);
@@ -102,11 +98,10 @@ footer {
 }
 .navbar .btn-primary:hover,
 .navbar .btn-primary:focus {
-  background-color: #1b7bd6; /* darker sky blue */
+  background-color: #1b7bd6; 
   border-color: #1b7bd6;
 }
 
-/* ----------- Nav link underline animation ------------- */
 .nav-link {
   position: relative;
   display: inline-block;
@@ -117,7 +112,7 @@ footer {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -5px; /* adjusted value to move the underline further down */
+  bottom: -5px; 
   width: 100%;
   height: 3px;
   background-color: var(--sky-blue);
@@ -131,37 +126,33 @@ footer {
   transform: scaleX(1);
 }
 
-/* Exact-width nav link underline */
 .navbar .nav-link {
-  padding: 0 !important; /* override Bootstrap */
+  padding: 0 !important; 
   margin: 0 0.75rem;
   overflow: visible !important;
 }
 
-/* Lower & rounded navbar underline */
 .navbar .nav-link::after {
-  bottom: -2px; /* slight gap below text */
+  bottom: -2px; 
   border-radius: 3px;
 }
 
-/* Slate-blue primary buttons everywhere else */
 .btn-primary {
   background-color: var(--bs-primary);
   border-color: var(--bs-primary);
 }
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #3342a0; /* darker slate blue hover */
+  background-color: #3342a0; 
   border-color: #3342a0;
 }
 
-/* Search bar styling */
 .search-bar {
-  flex: 0 0 auto; /* don't let flex define width */
-  width: 700px; /* explicit width */
+  flex: 0 0 auto; 
+  width: 700px; 
   max-width: 100%;
   margin-left: 0.25rem;
-  margin-right: 0rem; /* remove gap before Log In */
+  margin-right: 0rem; 
 }
 .search-bar .input-group-text {
   border-right: 0;
@@ -172,27 +163,23 @@ footer {
   box-shadow: none !important;
 }
 
-/* Login link styling */
 .login-link {
   color: #555 !important;
   font-weight: 600;
   margin-left: 0rem;
 }
 
-/* Reduce gap between items in top row */
 .navbar .top-row {
   gap: 0.25rem;
 }
 
-/* Slight spacing between login and signup button */
 .navbar .btn-primary {
   margin-left: 0.25rem;
 }
 
-/* -------- Responsive search bar for lg screens (992px-1199.98px) -------- */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .search-bar {
-    width: 500px; /* 200px smaller */
+    width: 500px; 
   }
 }
 
@@ -201,15 +188,15 @@ footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative; /* enable ::before overlay positioning */
-  min-height: 60vh; /* give hero some height */
+  position: relative; 
+  min-height: 60vh; 
 }
 
 .hero-image::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.15); /* dark overlay */
+  background: rgba(0, 0, 0, 0.15); 
   pointer-events: none;
 }
 
@@ -220,7 +207,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 25vh; /* ensure vertical centering space */
+  min-height: 25vh; 
 }
 
 .hero-image h1,
@@ -230,19 +217,18 @@ footer {
 
 .hero-image p {
   font-weight: 600;
-  color: #ffffff; /* slightly darker gray */
+  color: #ffffff; 
 }
 
 .hero-image .btn-primary {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* ---------------- Feature boxes ---------------- */
 .feature-box {
-  background-color: transparent; /* no fill */
-  border: 2px solid #0000005a; /* black outline */
+  background-color: transparent; 
+  border: 2px solid #0000005a; 
   border-radius: 0.75rem;
-  padding: 2.5rem; /* larger box */
+  padding: 2.5rem; 
   box-shadow: none;
   height: 100%;
   min-height: 390px;
@@ -251,44 +237,41 @@ footer {
 }
 
 .feature-box h4 {
-  font-size: 1.5rem; /* bigger heading */
+  font-size: 1.5rem; 
   color: var(--sky-blue);
-  margin-bottom: 2.5rem !important; /* extra space below title */
+  margin-bottom: 2.5rem !important; 
 }
 
 .feature-box p {
-  font-size: 1.2rem; /* slightly larger body text */
-  margin-bottom: 2rem; /* add extra space below text */
+  font-size: 1.2rem; 
+  margin-bottom: 2rem; 
 }
 
-/* Larger padding for overview section */
 .overview-section {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  margin-bottom: 3rem; /* extra gap below boxes */
-  background-color: #fefcf9; /* light tan splash */
-  position: relative; /* allow absolute children */
+  margin-bottom: 3rem; 
+  background-color: #fefcf9; 
+  position: relative; 
 }
 
-/* decorative line with paper plane */
 .decorative-line {
   position: absolute;
-  top: 60px; /* move down */
-  left: -50px; /* move further left */
-  width: 440px; /* expanded width */
+  top: 60px; 
+  left: -50px; 
+  width: 440px; 
   max-width: 60%;
   height: auto;
-  pointer-events: none; /* purely decorative */
+  pointer-events: none; 
 }
 
-/* Icon badge */
 .icon-badge {
   width: 72px;
   height: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(54, 186, 222, 0.1); /* faded teal fill */
+  background-color: rgba(54, 186, 222, 0.1); 
   border-radius: 50%;
   margin: 0 auto 1rem auto;
 }
@@ -297,9 +280,8 @@ footer {
   color: var(--sky-blue);
 }
 
-/* Bigger rounded buttons inside feature boxes */
 .feature-box .btn-primary {
-  margin-top: auto; /* push button to bottom of card so all align */
+  margin-top: auto; 
   padding: 0.75rem 1.75rem;
   border-radius: 50px;
   font-weight: 600;
@@ -315,64 +297,58 @@ footer {
   pointer-events: none;
 }
 
-/* Offset planes on medium screens (700px-1399px) */
 @media (min-width: 700px) and (max-width: 1399.98px) {
   .decorative-line,
   .decorative-line-right {
-    top: 110px; /* 50px lower */
+    top: 110px; 
   }
 }
 
-/* Offset planes on small screens (<700px) */
 @media (min-width: 400px) and (max-width: 699.98px) {
   .decorative-line,
   .decorative-line-right {
-    top: 180px; /* 100px lower */
+    top: 180px; 
   }
 }
 
 @media (max-width: 399.98px) {
   .decorative-line,
   .decorative-line-right {
-    top: 220px; /* 100px lower */
+    top: 220px; 
   }
 }
 
-/* Add gap between Resources intro and grid */
 .overview-section .row.g-4 {
-  margin-top: 3rem; /* additional space */
+  margin-top: 3rem; 
 }
 
-/* Style Resources heading */
 .overview-section h2 {
-  font-weight: 600; /* bold */
-  margin-top: 1.5rem; /* extra space above */
-  color: #3a3c3d; /* gray */
+  font-weight: 600; 
+  margin-top: 1.5rem; 
+  color: #3a3c3d; 
 }
 
-/* potentials pastel background */
 .potentials-section {
-  background-color: #ffead0d8; /* pastel yellow */
-  padding-top: 4rem !important; /* closer to top */
+  background-color: #ffead0d8; 
+  padding-top: 4rem !important; 
   padding-bottom: 10rem !important;
-  position: relative; /* allow absolute-positioned rocket image */
+  position: relative; 
 }
 
-/* potentials layout helpers */
 .potential-right {
-  margin-top: 15rem; /* push further down */
+  margin-top: 15rem; 
 }
 .potential-img {
-  max-width: 140%; /* larger image */
+  max-width: 140%; 
   height: auto;
   border-radius: 1rem;
-  margin-top: 2rem; /* move down slightly */
+  margin-top: 2rem; 
 }
 
 .resources-subtext {
   font-size: 1.3rem;
   font-weight: 400;
-  color: #6c757d; /* same muted gray as .text-muted */
+  color: #6c757d; 
 }
 
 .potentials-section h2 {
@@ -383,33 +359,31 @@ footer {
 }
 
 .potential-subtext {
-  font-size: 1.3rem; /* match resources-subtext */
+  font-size: 1.3rem; 
   font-weight: 400;
-  color: #6c757d; /* muted gray */
+  color: #6c757d; 
   margin-bottom: 6rem;
 }
 
-/* Potentials section styling */
 .potentials-section i {
-  color: var(--bs-primary) !important; /* make icons sky-blue */
+  color: var(--bs-primary) !important; 
 }
 
 .potentials-section h5 {
-  font-size: 1.5rem; /* bigger subtitle */
+  font-size: 1.5rem; 
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .potentials-section p.text-muted {
-  font-size: 1.2rem; /* bigger paragraph text */
-  color: #6c757d !important; /* muted gray */
+  font-size: 1.2rem; 
+  color: #6c757d !important; 
 }
 
 .potential-left {
   margin-top: 4rem;
 }
 
-/* Align text within potentials cards */
 .potential-left h5,
 .potential-left p {
   text-align: right;
@@ -420,7 +394,6 @@ footer {
   text-align: left;
 }
 
-/* Add padding between text columns and center image */
 .potential-left {
   padding-right: 3rem;
 }
@@ -429,12 +402,11 @@ footer {
   padding-left: 6rem;
 }
 
-/* ---------------- Join Us section ---------------- */
 .join-section {
   background-color: var(--bs-primary);
   padding: 6rem 0;
   text-align: center;
-  position: relative; /* allow absolute images */
+  position: relative; 
 }
 
 .join-section h2 {
@@ -446,7 +418,7 @@ footer {
 
 .join-section p {
   font-size: 1.3rem;
-  color: #e9f3fd !important; /* muted gray */
+  color: #e9f3fd !important; 
 }
 
 .join-section .btn-primary {
@@ -459,7 +431,7 @@ footer {
 
 .join-section .btn-primary:hover,
 .join-section .btn-primary:focus {
-  background-color: #1b7bd6; /* darker sky blue */
+  background-color: #1b7bd6;
   border-color: #1b7bd6;
 }
 
@@ -480,7 +452,6 @@ footer {
   right: 120px;
 }
 
-/* Hide mascots on very small screens */
 @media (max-width: 799.98px) {
   .join-img-left {
     width: 20%;
@@ -505,13 +476,11 @@ footer {
 
   }
 }
-/* Make mascot images in services.html smaller and stick left on small screens */
 
 
 
-/* ---------------- About section ---------------- */
 .about-section {
-  background-color: #f0f0f066; /* light grayish backdrop */
+  background-color: #f0f0f066; 
   padding-top: 7rem;
   padding-bottom: 7rem;
 }
@@ -525,7 +494,6 @@ footer {
   color: #3a3c3d;
 }
 
-/* ---------------- Compact Hero (services & about) ---------------- */
 .compact-hero {
   padding: 6rem 0 5rem;
   background-color: #5fc4d6;
@@ -550,7 +518,6 @@ footer {
   color: #efefeff0;
   font-weight: 500;
 }
-/* Make hero images in about.html 50% size on screens < 800px */
 @media (max-width: 1299.98px) {
   .compact-hero .hero-overlap-img,
   .compact-hero .hero-overlap-left {
@@ -607,7 +574,6 @@ footer {
   transform: scaleX(-1);
 }
 
-/* Reorder About section columns (image left, text right on md+) */
 @media (min-width: 768px) {
   .about-section .row {
     flex-direction: row-reverse;
@@ -615,15 +581,14 @@ footer {
 }
 
 .about-hero-img {
-  right: 40px; /* move 60px left from edge */
+  right: 40px; 
 }
 @media (max-width: 767.98px) {
   .about-hero-img {
-    right: 0; /* reset on small screens */
+    right: 0; 
   }
 }
 
-/* Potentials mobile adjustments */
 @media (max-width: 991.98px) {
   .potentials-section .potential-left,
   .potentials-section .potential-right {
@@ -649,40 +614,37 @@ footer {
     overflow: hidden;
   }
   .potential-right {
-    margin-top: 10rem; /* pull up to align with left heading */
+    margin-top: 10rem; 
   }
   .potential-right {
-    margin-left: -2.6rem; /* pull up to align with left heading */
+    margin-left: -2.6rem; 
   }
   .potential-left {
-    margin-left: 1rem; /* pull up to align with left heading */
+    margin-left: 1rem;
   }
 }
 
-/* Navbar dropdown hover on desktop */
 @media (min-width: 992px) {
   .navbar .dropdown:hover .dropdown-menu {
     display: block;
   }
 }
 
-/* Hide underline animation for dropdown toggles */
 .navbar .dropdown-toggle::after {
-  display: none !important; /* remove underline bar for toggles */
+  display: none !important; 
 }
 
-/* Adjust underline for dropdown toggles to match non‑dropdown links */
 .navbar .dropdown-toggle::before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -5px; /* match non‑dropdown underline offset */
+  bottom: -5px; 
   width: 100%;
   height: 3px;
   background-color: var(--sky-blue);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.6s ease; /* same speed as non‑dropdown */
+  transition: transform 0.6s ease; 
   border-radius: 3px;
   z-index: 0;
 }
@@ -691,28 +653,25 @@ footer {
   transform: scaleX(1);
 }
 
-/* Lower the dropdown menu */
 .navbar .dropdown .dropdown-menu {
-  margin-top: 4px; /* adjust as needed */
+  margin-top: 4px; 
 }
 
-/* Remove any extra underline on dropdown toggles */
 .navbar .dropdown-toggle::after {
   content: none !important;
 }
 
-/* Align dropdown underline with non‑dropdown links */
 .navbar .dropdown-toggle::before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -3px; /* match non‑dropdown underline offset */
+  bottom: -3px; 
   width: 100%;
   height: 3px;
   background-color: var(--sky-blue);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.6s ease; /* same speed as non‑dropdown */
+  transition: transform 0.6s ease; 
   border-radius: 3px;
   z-index: 0;
 }
@@ -722,11 +681,10 @@ footer {
   transform: scaleX(1);
 }
 
-/* Ensure the arrow stays above the underline */
 .navbar .dropdown-toggle .arrow-down {
   position: relative;
   z-index: 10;
   background: #fff;
   padding-left: 2px;
-  margin-bottom: -3px; /* adjust so it overlaps the underline */
+  margin-bottom: -3px; 
 }

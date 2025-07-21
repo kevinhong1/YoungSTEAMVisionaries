@@ -29,7 +29,6 @@
         <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
-    <!-- Hover & modal specific styles -->
     <style>
       .worksheet-card {
         position: relative;
@@ -310,13 +309,11 @@
 
     <div id="app" class="container-fluid py-4">
       <div class="row">
-        <!-- Filter Sidebar -->
         <aside class="col-12 col-md-4 col-lg-3 col-xl-2 mb-4 mb-md-0">
           <div class="card shadow-sm sticky-top" style="top: 1rem">
             <div class="card-body">
               <h5 class="fw-semibold mb-3">Filter Worksheets</h5>
 
-              <!-- Grade Level -->
               <div class="mb-4">
                 <h6 class="fw-semibold">Grade Level</h6>
                 <div class="form-check" v-for="g in gradeLevels" :key="g">
@@ -331,7 +328,6 @@
                 </div>
               </div>
 
-              <!-- Subjects -->
               <div class="mb-4">
                 <h6 class="fw-semibold">Subjects</h6>
                 <div class="form-check" v-for="s in subjects" :key="s">
@@ -346,7 +342,6 @@
                 </div>
               </div>
 
-              <!-- Mind Games -->
               <div>
                 <h6 class="fw-semibold">Mind Games</h6>
                 <div class="form-check" v-for="m in mindGames" :key="m">
@@ -364,7 +359,6 @@
           </div>
         </aside>
 
-        <!-- Worksheet Grid -->
         <main class="col-12 col-md-8 col-lg-9 col-xl-10">
           <div class="row g-4">
             <worksheet-card
@@ -380,7 +374,6 @@
       </div>
     </div>
 
-    <!-- Modal shown when a worksheet is clicked -->
     <div
       class="modal fade"
       id="worksheetModal"
@@ -427,7 +420,6 @@
 
       createApp({
         setup() {
-          // Master filter lists
           const gradeLevels = [
             "Pre-K",
             "K",
@@ -463,7 +455,6 @@
             "Logic Riddles",
           ];
 
-          // Sample worksheet data (representative — replace with real data later)
           const worksheets = ref([
             {
               id: 1,
@@ -477,10 +468,32 @@
                 "This worksheet helps students practice basic subtraction skills with fun visuals to better understand the fundamentals.",
               download: "#",
             },
-            
+            {
+              id: 2,
+              title: "Visual Subtraction Practice 2",
+              img: "images/2.png",
+              grades: ["K", "1st"],
+              subjects: ["Math"],
+              games: [],
+              summary: "Practice subtracting numbers with visual clues.",
+              description:
+                "This worksheet helps students practice basic subtraction skills with fun visuals to better understand the fundamentals.",
+              download: "#",
+            },
+            {
+              id: 3,
+              title: "Visual Subtraction Practice 3",
+              img: "images/3.png",
+              grades: ["K", "1st"],
+              subjects: ["Math"],
+              games: [],
+              summary: "Practice subtracting numbers with visual clues.",
+              description:
+                "This worksheet helps students practice basic subtraction skills with fun visuals to better understand the fundamentals.",
+              download: "#",
+            },
           ]);
 
-          // Merge any custom worksheets from localStorage
           try {
             const stored = JSON.parse(
               localStorage.getItem("customWorksheets") || "[]"
@@ -492,12 +505,10 @@
             console.error("Failed to load custom worksheets from storage", err);
           }
 
-          // Selected filters
           const selectedGrades = ref([]);
           const selectedSubjects = ref([]);
           const selectedMindGames = ref([]);
 
-          // Mapping of grade ranges to individual grades
           const gradeExpansionMap = {
             "Early Elementary (Pre-K – 2nd)": ["Pre-K", "K", "1st", "2nd"],
             "Elementary (3rd – 5th)": ["3rd", "4th", "5th"],
@@ -515,7 +526,6 @@
             return Array.from(out);
           };
 
-          // Check URL params for pre-selected grade
           const urlParams = new URLSearchParams(window.location.search);
           const preGrade = urlParams.get("grade");
           if (preGrade) {
@@ -525,7 +535,6 @@
           if (preSubject) {
             selectedSubjects.value.push(preSubject);
           }
-          // Keyword search filter
           const keyword = urlParams.get("keyword")?.toLowerCase() || "";
 
           const matchesFilter = (itemVals, selectedVals) => {
@@ -537,10 +546,8 @@
 
           const filteredWorksheets = computed(() => {
             const gradeFilter = expandGrades(selectedGrades.value);
-            // Helper: does worksheet match keyword?
             function matchesKeyword(w) {
               if (!keyword) return true;
-              // Check title, subjects, grades, games, summary, description
               const fields = [
                 w.title || "",
                 (w.subjects || []).join(" "),
@@ -581,7 +588,6 @@
               const res = await fetch("/api/worksheets");
               if (res.ok) {
                 const data = await res.json();
-                // deduplicate
                 data.forEach((d) => {
                   if (
                     !worksheets.value.some((w) => String(w.id) === String(d.id))
@@ -640,7 +646,6 @@
             var input = document.getElementById("worksheetSearchInput");
             var val = input.value.trim();
             if (val) {
-              // Redirect to worksheet.html with keyword param
               window.location.href =
                 "worksheet.html?keyword=" + encodeURIComponent(val);
             }
