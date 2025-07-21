@@ -7,7 +7,6 @@
   --border-color: #dee2e6;
 }
 
-/* keep global colors but avoid overriding site font */
 
 .contact-section {
   padding: 120px 0 60px;
@@ -61,7 +60,6 @@
   font-family: inherit;
 }
 
-/* Increase space below form heading */
 .contact-form-wrapper h2 {
   color: var(--primary-color);
   margin-bottom: 1.5rem;

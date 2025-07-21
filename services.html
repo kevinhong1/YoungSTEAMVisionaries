@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <style>
       .light-blue-section {
-        background-color: #f0f0f04a; /* Light blue background */
+        background-color: #f0f0f04a; 
         padding: 7rem 0;
         text-align: center;
         position: relative;
@@ -26,14 +26,14 @@
       }
 
       .light-blue-section h2 {
-        color: #101111; /* Darker text for contrast */
+        color: #101111; 
         font-size: 2.75rem;
         font-weight: 700;
         margin-bottom: 1.5rem;
       }
 
       .light-blue-section p {
-        color: #343e48 !important; /* Ensuring good readability */
+        color: #343e48 !important; 
         font-size: 1.3rem;
         margin-bottom: 1.5rem;
       }
@@ -104,7 +104,7 @@
         right: 120px;
       }
 
-      /* Hide mascots on very small screens */
+
       @media (max-width: 799.98px) {
         .mascot-left,
         .mascot-right {
@@ -116,8 +116,8 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 200px; /* Adjust as needed */
-        z-index: 0; /* Ensure it's behind other content */
+        width: 200px; 
+        z-index: 0;
       }
     </style>
   </head>
@@ -364,7 +364,6 @@
       </nav>
 
 
-    <!-- Compact Hero Section -->
     <section class="compact-hero">
       <div class="container text-center">
         <h1 class="display-4 fw-bold mb-3">
@@ -386,12 +385,10 @@
       />
     </section>
 
-    <!-- Grade Bands Overview -->
     <section class="pt-5 overview-section" id="grade-bands">
       <div class="container">
         <h2 class="text-center mb-4 display-6 fw-semibold">What We Offer</h2>
         <div class="row g-4">
-          <!-- Early Elementary -->
           <div class="col-md-4" id="pre-k-2">
             <div class="feature-box text-center h-100">
               <div class="icon-badge">
@@ -410,7 +407,6 @@
               >
             </div>
           </div>
-          <!-- Elementary -->
           <div class="col-md-4">
             <div class="feature-box text-center h-100">
               <div class="icon-badge">
@@ -428,7 +424,6 @@
               >
             </div>
           </div>
-          <!-- Middle School -->
           <div class="col-md-4">
             <div class="feature-box text-center h-100">
               <div class="icon-badge">
@@ -451,7 +446,6 @@
       </div>
     </section>
 
-    <!-- Tutoring Section (now with light blue background) -->
     <section class="light-blue-section" id="tutoring">
       <img src="images/phone_mascot.png" alt="Mascot" class="mascot-left" />
       <img src="images/phone_mascot2.png" alt="Mascot" class="mascot-right" />
@@ -473,8 +467,7 @@
       </div>
     </section>
 
-    <!-- Footer -->
-      <!-- Footer -->
+      <!-- foat -->
       <footer class="py-4 bg-dark text-light">
         <div class="container">
           <div class="row align-items-start">
@@ -519,7 +512,6 @@
             var input = document.getElementById("worksheetSearchInput");
             var val = input.value.trim();
             if (val) {
-              // Redirect to worksheet.html with keyword param
               window.location.href =
                 "worksheet.html?keyword=" + encodeURIComponent(val);
             }
