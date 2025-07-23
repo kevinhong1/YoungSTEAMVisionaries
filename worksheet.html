@@ -2,18 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Find and download free printable worksheets for K-8 students at Young STEAM Visionaries. Filter by grade, subject, and keyword to discover engaging resources." />
-    <meta property="og:title" content="Worksheet Finder | Young STEAM Visionaries" />
-    <meta property="og:description" content="Browse and download free printable worksheets for K-8 students. Filter by grade, subject, and keyword." />
+    <meta
+      name="description"
+      content="Find and download free printable worksheets for K-8 students at Young STEAM Visionaries. Filter by grade, subject, and keyword to discover engaging resources."
+    />
+    <meta
+      property="og:title"
+      content="Worksheet Finder | Young STEAM Visionaries"
+    />
+    <meta
+      property="og:description"
+      content="Browse and download free printable worksheets for K-8 students. Filter by grade, subject, and keyword."
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://youngsteamvisionaries.academy/worksheet.html" />
-    <meta property="og:image" content="https://youngsteamvisionaries.academy/images/logo.png" />
+    <meta
+      property="og:url"
+      content="https://youngsteamvisionaries.academy/worksheet.html"
+    />
+    <meta
+      property="og:image"
+      content="https://youngsteamvisionaries.academy/images/logo.png"
+    />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Worksheet Finder | Young STEAM Visionaries" />
-    <meta name="twitter:description" content="Browse and download free printable worksheets for K-8 students. Filter by grade, subject, and keyword." />
-    <meta name="twitter:image" content="https://youngsteamvisionaries.academy/images/logo.png" />
-    <link rel="canonical" href="https://youngsteamvisionaries.academy/worksheet.html" />
-    <meta name="keywords" content="worksheet finder, free worksheets, printable worksheets, K-8 worksheets, STEAM worksheets, math worksheets, science worksheets, reading worksheets, arts worksheets, filter worksheets, grade worksheets, subject worksheets, educational resources, student support, learning activities, educational engagement, educational excellence, educational innovation, educational inspiration, educational creativity, educational curiosity, educational motivation, educational achievement, educational success, educational growth, educational journey, educational potential, educational fun, educational made easy, accessible education, inclusive education" />
+    <meta
+      name="twitter:title"
+      content="Worksheet Finder | Young STEAM Visionaries"
+    />
+    <meta
+      name="twitter:description"
+      content="Browse and download free printable worksheets for K-8 students. Filter by grade, subject, and keyword."
+    />
+    <meta
+      name="twitter:image"
+      content="https://youngsteamvisionaries.academy/images/logo.png"
+    />
+    <link
+      rel="canonical"
+      href="https://youngsteamvisionaries.academy/worksheet.html"
+    />
+    <meta
+      name="keywords"
+      content="worksheet finder, free worksheets, printable worksheets, K-8 worksheets, STEAM worksheets, math worksheets, science worksheets, reading worksheets, arts worksheets, filter worksheets, grade worksheets, subject worksheets, educational resources, student support, learning activities, educational engagement, educational excellence, educational innovation, educational inspiration, educational creativity, educational curiosity, educational motivation, educational achievement, educational success, educational growth, educational journey, educational potential, educational fun, educational made easy, accessible education, inclusive education"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Worksheet Finder | Young STEAM Visionaries</title>
     <link
@@ -26,9 +56,13 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
     <script src="https://unpkg.com/vue@3"></script>
-        <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon" />
     <style>
       .worksheet-card {
         position: relative;
@@ -65,247 +99,251 @@
     </style>
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
-        <div class="container flex-column">
-          <div
-            class="d-flex align-items-center w-100 top-row justify-content-center"
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+      <div class="container flex-column">
+        <div
+          class="d-flex align-items-center w-100 top-row justify-content-center"
+        >
+          <a
+            class="navbar-brand fw-bold me-2 d-flex align-items-center"
+            href="index.html"
           >
-            <a class="navbar-brand fw-bold me-2 d-flex align-items-center" href="index.html">
-              <img src="images/logo.png" alt="Young STEAM Visionaries Logo" style="height: 30px; width: auto; margin-right: 0.5rem;">
-            </a>
-            <form
-              class="ms-2 me-3 d-none d-lg-block"
-              id="worksheetSearchForm"
-              role="search"
-            >
-              <div class="input-group search-bar">
-                <span class="input-group-text bg-white border-end-0">
-                  <i class="bi bi-search"></i>
-                </span>
-                <input
-                  type="search"
-                  class="form-control border-start-0"
-                  placeholder='Search "addition worksheets"'
-                  id="worksheetSearchInput"
-                  name="q"
-                  autocomplete="off"
-                  aria-label="Search worksheets"
-                />
-              </div>
-            </form>
-            <a class="btn btn-primary" href="worksheet.html">Free Worksheets</a>
-            <button
-              class="navbar-toggler ms-2"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navMenu"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-          <div class="collapse navbar-collapse mt-3 w-100" id="navMenu">
-            <form class="d-lg-none my-3 w-100">
-              <div class="input-group search-bar">
-                <span class="input-group-text bg-white border-end-0"
-                  ><i class="bi bi-search"></i
-                ></span>
-                <input
-                  type="search"
-                  class="form-control border-start-0"
-                  placeholder='Search "addition worksheets"'
-                />
-              </div>
-            </form>
-
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="services.html">Services</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Grades <span class="ms-0 arrow-down">&#x25BE;</span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="worksheet.html?grade=Pre-K"
-                      >Pre-K</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="worksheet.html?grade=K"
-                      >Kindergarten</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="worksheet.html?grade=1st"
-                      >1st Grade</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="worksheet.html?grade=2nd"
-                      >2nd Grade</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="worksheet.html?grade=3rd"
-                      >3rd Grade</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="worksheet.html?grade=4th"
-                      >4th Grade</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="worksheet.html?grade=5th"
-                      >5th Grade</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="worksheet.html?grade=6th"
-                      >6th Grade</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="worksheet.html?grade=7th"
-                      >7th Grade</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="worksheet.html?grade=8th"
-                      >8th Grade</a
-                    >
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="worksheet.html?grade=Early%20Elementary%20(Pre-K%20%E2%80%93%202nd)"
-                      >Early Elementary</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="worksheet.html?grade=Elementary%20(3rd%20%E2%80%93%205th)"
-                      >Elementary</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="worksheet.html?grade=Middle%20School"
-                      >Middle School</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Subjects <span class="ms-0 arrow-down">&#x25BE;</span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="worksheet.html?subject=Science"
-                      >Science</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="worksheet.html?subject=Technology"
-                      >Technology</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="worksheet.html?subject=Arts"
-                      >Arts</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="worksheet.html?subject=Engineering"
-                      >Engineering</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="worksheet.html?subject=Math"
-                      >Math</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="worksheet.html?subject=Reading"
-                      >Reading</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="worksheet.html?subject=Social%20Studies"
-                      >Social Studies</a
-                    >
-                  </li>
-                </ul>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="worksheet.html">Worksheets</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  More <span class="ms-0 arrow-down">&#x25BE;</span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="become-tutor.html"
-                      >Become a Tutor</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="contact.html">Feedback</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="tutor.html">Schedule Session</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+            <img
+              src="images/logo.png"
+              alt="Young STEAM Visionaries Logo"
+              style="height: 30px; width: auto; margin-right: 0.5rem"
+            />
+          </a>
+          <form
+            class="ms-2 me-3 d-none d-lg-block"
+            id="worksheetSearchForm"
+            role="search"
+          >
+            <div class="input-group search-bar">
+              <span class="input-group-text bg-white border-end-0">
+                <i class="bi bi-search"></i>
+              </span>
+              <input
+                type="search"
+                class="form-control border-start-0"
+                placeholder='Search "addition worksheets"'
+                id="worksheetSearchInput"
+                name="q"
+                autocomplete="off"
+                aria-label="Search worksheets"
+              />
+            </div>
+          </form>
+          <a class="btn btn-primary" href="worksheet.html">Free Worksheets</a>
+          <button
+            class="navbar-toggler ms-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
-      </nav>
+        <div class="collapse navbar-collapse mt-3 w-100" id="navMenu">
+          <form class="d-lg-none my-3 w-100">
+            <div class="input-group search-bar">
+              <span class="input-group-text bg-white border-end-0"
+                ><i class="bi bi-search"></i
+              ></span>
+              <input
+                type="search"
+                class="form-control border-start-0"
+                placeholder='Search "addition worksheets"'
+              />
+            </div>
+          </form>
 
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Grades <span class="ms-0 arrow-down">&#x25BE;</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="worksheet.html?grade=Pre-K"
+                    >Pre-K</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="worksheet.html?grade=K"
+                    >Kindergarten</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="worksheet.html?grade=1st"
+                    >1st Grade</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="worksheet.html?grade=2nd"
+                    >2nd Grade</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="worksheet.html?grade=3rd"
+                    >3rd Grade</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="worksheet.html?grade=4th"
+                    >4th Grade</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="worksheet.html?grade=5th"
+                    >5th Grade</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="worksheet.html?grade=6th"
+                    >6th Grade</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="worksheet.html?grade=7th"
+                    >7th Grade</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="worksheet.html?grade=8th"
+                    >8th Grade</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="worksheet.html?grade=Early%20Elementary%20(Pre-K%20%E2%80%93%202nd)"
+                    >Early Elementary</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="worksheet.html?grade=Elementary%20(3rd%20%E2%80%93%205th)"
+                    >Elementary</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="worksheet.html?grade=Middle%20School"
+                    >Middle School</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Subjects <span class="ms-0 arrow-down">&#x25BE;</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="worksheet.html?subject=Science"
+                    >Science</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="worksheet.html?subject=Technology"
+                    >Technology</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="worksheet.html?subject=Arts"
+                    >Arts</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="worksheet.html?subject=Engineering"
+                    >Engineering</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="worksheet.html?subject=Math"
+                    >Math</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="worksheet.html?subject=Reading"
+                    >Reading</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="worksheet.html?subject=Social%20Studies"
+                    >Social Studies</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="worksheet.html">Worksheets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                More <span class="ms-0 arrow-down">&#x25BE;</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="become-tutor.html"
+                    >Become a Tutor</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="contact.html">Feedback</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="tutor.html"
+                    >Schedule Session</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <div id="app" class="container-fluid py-4">
       <div class="row">
@@ -472,7 +510,7 @@
               id: 7,
               title: "Technology Matching 1",
               img: "images/7.png",
-              grades: ["K", "1st", "2nd","3rd"],
+              grades: ["K", "1st", "2nd", "3rd"],
               subjects: ["Technoogy"],
               games: [],
               summary: "Match common technology items to their names.",
@@ -484,10 +522,11 @@
               id: 12,
               title: "Emoji Code Breaker",
               img: "images/12.png",
-              grades: [ "1st", "2nd","3rd"],
-              subjects: ["Logic Riddles", "Word Puzzles", "Word Search", "Reading", "Arts"],
-              games: [],
-              summary: "Crack emoji codes using a fun key chart to reveal secret words.",
+              grades: ["1st", "2nd", "3rd"],
+              subjects: ["Reading", "Arts"],
+              games: ["Logic Riddles", "Word Puzzles", "Word Search"],
+              summary:
+                "Crack emoji codes using a fun key chart to reveal secret words.",
               description:
                 "This worksheet uses fun emojis and pictures to help practice early decoding, pattern recognition, and letter matching as they use a visual key. This is great for building problem-solving and literacy skills in an engaging activity.",
               download: "#",
@@ -502,6 +541,32 @@
               summary: "Practice subtracting numbers with visual clues.",
               description:
                 "This worksheet helps students practice basic subtraction skills with fun visuals to better understand the fundamentals.",
+              download: "#",
+            },
+            {
+              id: 16,
+              title: "Count to 100 Challenge 1",
+              img: "images/16.png",
+              grades: ["K", "1st", "2nd"],
+              subjects: ["Math"],
+              games: ["Memory Games"],
+              summary:
+                "Fill in the missing numbers to complete the chart from 1 to 100.",
+              description:
+                "This fun number chart helps kids practice counting and number counting up to 100. People will identify and fill in the missing numbers to reinforce fundamentals.",
+              download: "#",
+            },
+            {
+              id: 19,
+              title: "Bee Multiplication",
+              img: "images/19.png",
+              grades: ["2nd", "3rd", "4th"],
+              subjects: ["Math", "Arts"],
+              games: ["Logic Riddles"],
+              summary:
+                "Match the multiplication equation to its product and color each pair",
+              description:
+                "This worksheet aims to help students strengthen their multiplication skills by matching equations with their correct answers. With a beelike theme, this activity adds fun to math!",
               download: "#",
             },
             {
@@ -520,19 +585,33 @@
               id: 14,
               title: "Animal Code Breaker",
               img: "images/14.png",
-              grades: [ "1st", "2nd","3rd"],
-              subjects: ["Logic Riddles", "Word Puzzles", "Word Search", "Reading", "Arts"],
-              games: [],
-              summary: "Crack emoji codes using a fun key chart to reveal secret words.",
+              grades: ["1st", "2nd", "3rd"],
+              subjects: ["Reading", "Arts"],
+              games: ["Logic Riddles", "Word Puzzles", "Word Search"],
+              summary:
+                "Crack emoji codes using a fun key chart to reveal secret words.",
               description:
                 "This worksheet uses fun emojis and pictures to help practice early decoding, pattern recognition, and letter matching as they use a visual key. This is great for building problem-solving and literacy skills in an engaging activity.",
+              download: "#",
+            },
+            {
+              id: 18,
+              title: "Count to 100 Challenge Christmas",
+              img: "images/18.png",
+              grades: ["K", "1st", "2nd"],
+              subjects: ["Math"],
+              games: ["Memory Games"],
+              summary:
+                "Fill in the missing numbers to complete the chart from 1 to 100.",
+              description:
+                "This fun number chart helps kids practice counting and number counting up to 100. People will identify and fill in the missing numbers to reinforce fundamentals.",
               download: "#",
             },
             {
               id: 5,
               title: "Visual Addition Practice 2",
               img: "images/5.png",
-              grades: ["Pre-K","K", "1st"],
+              grades: ["Pre-K", "K", "1st"],
               subjects: ["Math"],
               games: [],
               summary: "Practice adding numbers with visual clues.",
@@ -549,7 +628,20 @@
               games: [],
               summary: "Identify and find letters on a keyboard.",
               description:
-                    "This worksheet introduces students to a keyboard, asking them to find and circle the letters that spell their name, helping build familiarity with typing tools.",
+                "This worksheet introduces students to a keyboard, asking them to find and circle the letters that spell their name, helping build familiarity with typing tools.",
+              download: "#",
+            },
+            {
+              id: 17,
+              title: "Count to 100 Challenge 2",
+              img: "images/17.png",
+              grades: ["K", "1st", "2nd"],
+              subjects: ["Math"],
+              games: ["Memory Games"],
+              summary:
+                "Fill in the missing numbers to complete the chart from 1 to 100.",
+              description:
+                "This fun number chart helps kids practice counting and number counting up to 100. People will identify and fill in the missing numbers to reinforce fundamentals.",
               download: "#",
             },
             {
@@ -568,7 +660,7 @@
               id: 8,
               title: "Technology Matching 2",
               img: "images/8.png",
-              grades: ["K", "1st", "2nd","3rd"],
+              grades: ["K", "1st", "2nd", "3rd"],
               subjects: ["Technoogy"],
               games: [],
               summary: "Match common technology items to their names.",
@@ -580,7 +672,7 @@
               id: 10,
               title: "Coding by Color 1",
               img: "images/10.png",
-              grades: ["Pre-K","K", "1st"],
+              grades: ["Pre-K", "K", "1st"],
               subjects: ["Math"],
               games: [],
               summary: "Practice adding numbers with visual clues.",
@@ -592,10 +684,11 @@
               id: 13,
               title: "Emoji Code Breaker 2",
               img: "images/13.png",
-              grades: [ "1st", "2nd","3rd"],
-              subjects: ["Logic Riddles", "Word Puzzles", "Word Search", "Reading", "Arts"],
-              games: [],
-              summary: "Crack emoji codes using a fun key chart to reveal secret words.",
+              grades: ["1st", "2nd", "3rd"],
+              subjects: ["Reading", "Arts"],
+              games: ["Logic Riddles", "Word Puzzles", "Word Search"],
+              summary:
+                "Crack emoji codes using a fun key chart to reveal secret words.",
               description:
                 "This worksheet uses fun emojis and pictures to help practice early decoding, pattern recognition, and letter matching as they use a visual key. This is great for building problem-solving and literacy skills in an engaging activity.",
               download: "#",
@@ -604,7 +697,7 @@
               id: 6,
               title: "Visual Addition Practice 3",
               img: "images/6.png",
-              grades: ["Pre-K","K", "1st"],
+              grades: ["Pre-K", "K", "1st"],
               subjects: ["Math"],
               games: [],
               summary: "Practice adding numbers with visual clues.",
@@ -616,9 +709,9 @@
               id: 11,
               title: "Coding by Color 2",
               img: "images/11.png",
-              grades: ["Pre-K","K", "1st"],
-              subjects: ["Technology", "Logic Riddles"],
-              games: [],
+              grades: ["Pre-K", "K", "1st"],
+              subjects: ["Technology"],
+              games: ["Logic Riddles"],
               summary: "Copy color patterns to simulate basic coding logic.",
               description:
                 "This worksheet will help strengthen pattern recognition and sequencing skills by copying colored blocks, a great early introduction to coding concepts.",
@@ -628,10 +721,11 @@
               id: 15,
               title: "Animal Code Breaker 2",
               img: "images/15.png",
-              grades: [ "1st", "2nd","3rd"],
-              subjects: ["Logic Riddles", "Word Puzzles", "Word Search", "Reading", "Arts"],
-              games: [],
-              summary: "Crack emoji codes using a fun key chart to reveal secret words.",
+              grades: ["1st", "2nd", "3rd"],
+              subjects: ["Reading", "Arts"],
+              games: ["Logic Riddles", "Word Puzzles", "Word Search"],
+              summary:
+                "Crack emoji codes using a fun key chart to reveal secret words.",
               description:
                 "This worksheet uses fun emojis and pictures to help practice early decoding, pattern recognition, and letter matching as they use a visual key. This is great for building problem-solving and literacy skills in an engaging activity.",
               download: "#",
@@ -781,7 +875,7 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
+    <script>
       document.addEventListener("DOMContentLoaded", function () {
         var form = document.getElementById("worksheetSearchForm");
         if (form) {
