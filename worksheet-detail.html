@@ -88,7 +88,7 @@
           <div class="row gy-4 align-items-start">
             <div class="col-md-5">
               <img
-                :src="worksheet.img"
+                :src="worksheet.id === 104 ? 'images/104.png' : worksheet.id === 105 ? 'images/105.png' : worksheet.id === 106 ? 'images/106.png' : worksheet.img"
                 :alt="worksheet.title"
                 class="img-fluid rounded"
                 loading="lazy"
@@ -145,6 +145,7 @@
     </div>
 
     <script>
+      
       const { createApp, ref, onMounted } = Vue;
 
       const baseWorksheets = [
@@ -1445,7 +1446,7 @@
         {
           id: 101,
           title: "Technology Word Search",
-          img: "images/100.png",
+          img: "images/101.png",
           grades: ["4th", "5th", "6th", "7th", "8th"],
           subjects: ["Technology", "Reading", "Engineering", "Arts"],
           games: ["Word Search", "Word Puzzles"],
@@ -1458,7 +1459,7 @@
         {
           id: 102,
           title: "Technology Word Search",
-          img: "images/100.png",
+          img: "images/102.png",
           grades: ["4th", "5th", "6th", "7th", "8th"],
           subjects: ["Technology", "Reading", "Engineering", "Arts"],
           games: ["Word Search", "Word Puzzles"],
@@ -1471,7 +1472,7 @@
         {
           id: 103,
           title: "Technology Word Search",
-          img: "images/100.png",
+          img: "images/103.png",
           grades: ["4th", "5th", "6th", "7th", "8th"],
           subjects: ["Technology", "Reading", "Engineering", "Arts"],
           games: ["Word Search", "Word Puzzles"],
@@ -1479,6 +1480,235 @@
             "Find hidden words related to these technology and engineering topics in this word search.",
           description:
     "This worksheet challenges young learners to find and identify vocabulary words related to technology and engineering. Helps to reinforce spelling, reading, technology and engineering concepts while helping develop pattern recognition skills.",
+          download: "#",
+        },
+        {
+          id: 104,
+          title: "Wind-Powered Car",
+          img: "images/104.pdf",
+          grades: ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"],
+          subjects: ["Technology", "Science", "Engineering", "Arts"],
+          games: [],
+          summary:
+            "Design and race a car powered by wind using recycled materials.",
+          description:
+    "In this STEAM challenge, students create a wind-powered car using household or recycled materials. They explore concepts of aerodynamics, energy transfer, and friction as they test and race their creations. A fun way to integrate science and engineering in a hands-on task.",
+          download: "#",
+          
+        },
+        {
+          id: 105,
+          title: "Paper Bridge Challenge",
+          img: "images/105.pdf",
+          grades: ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"],
+          subjects: ["Technology", "Science", "Engineering", "Arts"],
+          games: [],
+          summary:
+            "Design a bridge made out of sheets of paper and tape that can hold weight.",
+          description:
+    "In this STEAM challenge, students design and create a bridge made out of sheets of paper and tape. They explore concepts of tension, energy transfer, and structural integrity as they design and test creations. A fun way to integrate science and engineering in a hands-on task.",
+          download: "#",
+          
+        },
+        {
+          id: 106,
+          title: "Catapult Challenge",
+          img: "images/106.pdf",
+          grades: ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"],
+          subjects: ["Technology", "Science", "Engineering", "Arts"],
+          games: [],
+          summary:
+            "Design and build a simple catapult using craft sticks, rubber bands, and a spoon.",
+          description:
+    "In this STEAM challenge, students design and create a simple catapult using craft sticks, rubber bands, and a spoon. They explore concepts of kinetic energy, energy transfer, and projectile motion as they test their creations. A fun way to integrate science and engineering in a hands-on task.",
+          download: "#",
+          
+        },
+        {
+          id: 107,
+          title: "Types of Weather",
+          img: "images/107.png",
+          grades: ["1st", "2nd", "3rd"],
+          subjects: ["Technology", "Science", "Engineering", "Arts"],
+          games: [],
+          summary:
+            "Identify different types of weather using words and images.",
+          description:
+    "This worksheet helps students recognize common weather types such as sunny, rainy, snowy, and more. They use a word bank to label each weather image, strengthening reading and science vocabulary skills.",
+          download: "#",
+          
+        },
+        {
+          id: 108,
+          title: "Engineering Pamphlet",
+          img: "images/108.png",
+          grades: ["Pre-k", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"],
+          subjects: ["Technology", "Science", "Engineering"],
+          games: [],
+          summary:
+            "This is a pamphlet about engineering and its the importance of it.",
+          description:
+    "This engineering pamphlet helps students understand the basics of engineering, its importance in everyday life, and the different fields within engineering. It includes engaging visuals and simple explanations to make the content accessible for young learners.",
+          download: "#",
+          
+        },
+        {
+          id: 109,
+          title: "States of Matter",
+          img: "images/109.png",
+          grades: ["Pre-k", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"],
+          subjects: ["Technology", "Science", "Engineering"],
+          games: [],
+          summary:
+            "This is a worksheet about different objects found right in your house.",
+          description:
+    "This worksheet helps students learn about the three states of matter: solid, liquid, and gas. It encourages students to explore thier homes and list 5 objects that are examples of each state, encouraging students to identify and categorize everyday objects based on their state of matter. A fun way to reinforce science concepts through observation.",
+          download: "#",
+          
+        },
+        {
+          id: 110,
+          title: "Problem-Solving Pamphlet",
+          img: "images/110.png",
+          grades: ["Pre-k", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"],
+          subjects: ["Technology", "Science", "Engineering"],
+          games: [],
+          summary:
+            "This is a pamphlet about the problem solving process.",
+          description:
+    "This problem-solving pamphlet introduces students to the steps of the problem-solving process. It provides a simple framework for identifying problems, brainstorming solutions, and evaluating outcomes. The pamphlet is designed to help students develop critical thinking and analytical skills in a fun and engaging way.",
+          download: "#",
+          
+        },
+        {
+          id: 111,
+          title: "Natural Disasters Worksheet",
+          img: "images/111.png",
+          grades: [ "2nd", "3rd", "4th", "5th", "6th"],
+          subjects: ["Science", "Social Studies", "Reading"],
+          games: [],
+          summary:
+"Match natural disasters with their names using visual clues.",
+          description:
+    "Students learn about different types of natural disasters through visual identification and vocabulary practice. From floods to wildfires and earthquakes, this worksheet builds awareness and comprehension of environmental events.",
+          download: "#",
+        },
+        {
+          id: 112,
+          title: "Human Anatomy",
+          img: "images/112.png",
+          grades: [ "4th", "5th", "6th", "7th", "8th"],
+          subjects: [ "Science"],
+          games: [],
+          summary:
+"Label and identify parts of the human body with a fill in.",
+          description:
+    "This anatomy worksheet helps students recognize major human organs and their locations. Learners fill in labels to match organs such as the heart, lungs, liver, and stomach, perfect for early biology learning.",
+          download: "#",
+        },
+        {
+          id: 113,
+          title: "Turtle Anatomy",
+          img: "images/113.png",
+          grades: [ "4th", "5th", "6th", "7th", "8th"],
+          subjects: [ "Science"],
+          games: [],
+          summary:
+"Label and identify parts of a turtle with a cut-and-paste activity.",
+          description:
+    "This worksheet helps students recognize and match turtle parts and their locations. Learners cut and paste labels to match their respective part on the turtle.",
+          download: "#",
+        },
+
+        {
+          id: 114,
+          title: "Sink or Float?",
+          img: "images/114.png",
+          grades: [ "1st","2nd","3rd", "4th"],
+          subjects: [ "Science"],
+          games: ["Logic Riddles"],
+          summary:
+"Identify different objects and recognize if it floats or sinks.",
+          description:
+    "This worksheet helps students recognize different objects and predict whether they will float or sink in water. It encourages critical thinking and scientific reasoning as students explore buoyancy concepts.",
+          download: "#",
+        },
+        {
+          id: 115,
+          title: "Technology Match",
+          img: "images/115.png",
+          grades: [ "Pre-K", "1st","2nd","3rd", "4th"],
+          subjects: [ "Science"],
+          games: ["Logic Riddles"],
+          summary:
+"Can you match the technology with its predecessor?",
+          description:
+    "This worksheet helps students recognize various technologies and their predecessors. It encourages critical thinking and understanding of technological advancements.",
+          download: "#",
+        },
+        {
+          id: 116,
+          title: "Technology Match 2",
+          img: "images/116.png",
+          grades: [ "Pre-K", "1st","2nd","3rd", "4th"],
+          subjects: [ "Science"],
+          games: ["Logic Riddles"],
+          summary:
+"Can you match the technology with its predecessor?",
+          description:
+    "This worksheet helps students recognize various technologies and their predecessors. It encourages critical thinking and understanding of technological advancements.",
+          download: "#",
+        },
+        {
+          id: 117,
+          title: "Sources of Energy",
+          img: "images/117.png",
+          grades: ["2nd","3rd", "4th", "5th", "6th", "7th"],
+          subjects: [ "Science", "Arts"],
+          games: [],
+          summary:
+"Can you match the different sources of energy with its classification?",
+          description:
+    "This worksheet helps students recognize and match different sources of energy with their classifications. It encourages critical thinking and understanding of different energy sources.",
+          download: "#",
+        },
+        {
+          id: 118,
+          title: "How to Move These Objects?",
+          img: "images/118.png",
+          grades: ["2nd","3rd", "4th", "5th", "6th", "7th"],
+          subjects: [ "Science", "Arts"],
+          games: ["Logic Riddles"],
+          summary:
+"Can you match the different objects with how they can be moved?",
+          description:
+    "This worksheet helps students recognize and match different objects with how they can be moved. It encourages critical thinking and understanding of motion concepts.",
+          download: "#",
+        },
+        {
+          id: 119,
+          title: "Human Anatomy",
+          img: "images/119.png",
+          grades: [ "4th", "5th", "6th", "7th", "8th"],
+          subjects: [ "Science"],
+          games: [],
+          summary:
+"Can you fill in the different parts of the human body?",
+          description:
+    "This worksheet helps students recognize and fill in the different parts of the human body. It encourages critical thinking and understanding of human anatomy.",
+          download: "#",
+        },
+        {
+          id: 120,
+          title: "Alive or Unalive?",
+          img: "images/120.png",
+          grades: ["Pre-K", "1st", "2nd"],
+          subjects: [ "Science"],
+          games: ["Logic Riddles"],
+          summary:
+"Can you fill in different objects with whether they're living creators or not?",
+          description:
+    "This worksheet helps students recognize different objects and determine whether they are living creatures or not. It encourages critical thinking and understanding of life sciences.",
           download: "#",
         },
       ];
@@ -1549,6 +1779,7 @@
 
           return { worksheet, similarWorks };
         },
+        
       }).mount("#detailApp");
     </script>
 
